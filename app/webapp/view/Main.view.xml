@@ -1,0 +1,40 @@
+<mvc:View
+controllerName="app.controller.Main"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:l="sap.ui.layout">
+	<VBox height="100%" width="100%" direction="Column" justifyContent="Center" alignItems="Center" >
+	<f:SimpleForm id="SimpleFormDisplayColumn_oneGroup"  width="40rem" layout="ResponsiveGridLayout">
+		<Label text="Ad" labelFor="input-a" required="true" />
+		<Input id="input-a" width="50%" maxLength="50"/>
+
+		<Label text="Soyad" labelFor="input-b" required="true" />
+		<Input id="input-b" width="28%" maxLength="50"/>
+
+		<Label text="E-Mail" labelFor="input-c" valueStateText="Lütfen geçerli bir e-posta adresi girin." liveChange="onEmailChange" />
+		<Input id="input-c" width="60%" />
+
+		<Label text="Telefon" labelFor="input-phone"/>
+		<MaskInput id="input-phone" mask="+90 999 999 99 99" placeholderCharacter="_" type="Number" width="28%" liveChange="onPhoneNumberChange" valueStateText="Lütfen geçerli bir telefon numarası girin." />
+		
+		<Label />
+		<FlexBox direction="RowReverse" alignItems="Start">
+		
+		<Button 
+		icon="sap-icon://save"
+			type="Emphasized"
+			text="Kaydet"
+			press="onSavePress"
+			width="100%"
+			ariaDescribedBy="defaultButtonDescription genericButtonDescription"
+			layoutData="{ path: '/buttonLayoutData' }">
+		</Button>
+		</FlexBox>
+	
+	
+		
+		
+	</f:SimpleForm>
+	</VBox>
+</mvc:View>

@@ -1,0 +1,14 @@
+{
+  "generator-ui5-app": {
+    "namespace": "app",
+    "framework": "OpenUI5",
+    "frameworkVersion": "1.116.0",
+    "author": "",
+    "initrepo": false,
+    "appId": "app",
+    "appURI": "app",
+    "cdnDomain": "sdk.openui5.org",
+    "defaultTheme": "sap_horizon",
+    "setupCompleted": true
+  }
+}
