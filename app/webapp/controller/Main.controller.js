@@ -31,10 +31,30 @@ sap.ui.define([
             // Şartları kontrol et
             if (oData.ad.trim() === "") {
                 bError = true;
+                this.getView().byId("input-a").setValueState("Error");
+            } else {
+                this.getView().byId("input-a").setValueState("None");
+            }
+
+            if (oData.soyad.trim() === "") {
+                bError = true;
+                this.getView().byId("input-b").setValueState("Error");
+            } else {
+                this.getView().byId("input-b").setValueState("None");
             }
 
             if (!this.checkEmail(oData.email)) {
                 bError = true;
+                this.getView().byId("input-c").setValueState("Error");
+            } else {
+                this.getView().byId("input-c").setValueState("None");
+            }
+
+            if (oData.telefon.trim() === "") {
+                bError = true;
+                this.getView().byId("input-phone").setValueState("Error");
+            } else {
+                this.getView().byId("input-phone").setValueState("None");
             }
 
             return bError;
