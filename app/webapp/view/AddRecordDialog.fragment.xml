@@ -1,0 +1,43 @@
+<core:FragmentDefinition xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns="sap.m">
+<!-- aylarca uğraştığın hatayı çözerken önce xmlns="sap.m" eklemediğini gördün sonra xmlns:f="sap.ui.layout"
+eklediğini gördün. Ancak biz form kullanıyoruz ve form a çıkışı olması için xmlns:f="sap.ui.layout.form" verdin-->
+    <Dialog id="AddRecordDialog" title="Yeni Kayıt Ekle" contentWidth="300px">
+        <content>
+            <VBox>
+                <f:Form id="form" editable="true" model="modelName"> <!-- modelName modelini ekledik -->
+                    <f:layout>
+                        <f:ResponsiveGridLayout/>
+                    </f:layout>
+                    <f:formContainers>
+                        <f:FormContainer>
+                            <f:formElements>
+                                <f:FormElement>
+                                    <Label text="Ad" />
+                                    <Input id="input-a" value="{modelName>/ad}" /> <!-- modelName modeli ile binding ekledik -->
+                                </f:FormElement>
+                                <f:FormElement>
+                                    <Label text="Soyad" />
+                                    <Input id="input-b" value="{modelName>/soyad}" /> <!-- modelName modeli ile binding ekledik -->
+                                </f:FormElement>
+                                <f:FormElement>
+                                    <Label text="E-Mail" />
+                                    <Input id="input-c" value="{modelName>/email}" change="onEmailChange" /> <!-- modelName modeli ile binding ekledik -->
+                                </f:FormElement>
+                                <f:FormElement>
+                                    <Label text="Telefon" />
+                                    <Input id="input-phone" value="{modelName>/telefon}" change="onPhoneNumberChange" /> <!-- modelName modeli ile binding ekledik -->
+                                </f:FormElement>
+                            </f:formElements>
+                        </f:FormContainer>
+                    </f:formContainers>
+                </f:Form>
+            </VBox>
+        </content>
+        <beginButton>
+            <Button text="Kaydet" type="Accept" press="onSaveNewRecordPress" />
+        </beginButton>
+        <endButton>
+            <Button text="İptal" press="onCancelNewRecordPress" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

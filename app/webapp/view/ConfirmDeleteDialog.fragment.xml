@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog id="ConfirmDeleteDialog" title="Kaydı Sil" contentWidth="300px">
+        <content>
+            <VBox>
+                <Text text="Seçili kaydı silmek istediğinize emin misiniz?" />
+            </VBox>
+        </content>
+        <beginButton>
+            <Button text="Evet" type="Reject" press="onDeleteConfirmed" />
+        </beginButton>
+        <endButton>
+            <Button text="Hayır" press="onDeleteCanceled" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>
